@@ -14,7 +14,7 @@ function App() {
 
   const fetchClients = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/api/clients");
+      const response = await axios.get("https://crud-backend-oqn5.onrender.com//api/clients");
       setTableData(response.data); // Set the fetched data
     } catch (err) {
       setError(err.message);
@@ -49,7 +49,7 @@ function App() {
       console.log("Updating client with ID:", clientData.id); // Log the ID being updated
       try {
         const response = await axios.put(
-          `http://localhost:3000/api/clients/${clientData.id}`,
+          `https://crud-backend-oqn5.onrender.com/api/clients/${clientData.id}`,
           newClientData
         );
         console.log("Client updated:", response.data);
