@@ -14,7 +14,7 @@ function App() {
 
   const fetchClients = async () => {
     try {
-      const response = await axios.get("https://crud-backend-oqn5.onrender.com//api/clients");
+      const response = await axios.get("https://crud-backend-oqn5.onrender.com/api/clients");
       setTableData(response.data); // Set the fetched data
     } catch (err) {
       setError(err.message);
